@@ -13,7 +13,7 @@ Silver - black (10% opacity) or white (90% opacity) */
 
 /* Sitewide */
 html {
-	font-family: "Open Sans", sans-serif;
+	font-family: "Open Sans", Helvetica, sans-serif;
     font-weight: 400;
     height: 100%;
 }
