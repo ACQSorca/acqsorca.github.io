@@ -141,12 +141,12 @@ a:hover {
 /* NavMenu */
 #navmenu {
 	float: left;
-	background-color: rgba(0, 0, 0, .1);
+	background-color: lightgray;
 	padding: 0;
 	width: auto;
     min-width: 190px;
     min-height: 500px;
-    height: 100%;
+    height: 2000px; /* There has to be a better way */
     overflow: visible;
 }
 
@@ -204,7 +204,7 @@ a:hover {
     position: absolute;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,.1); 
+    background-color: rgba(0,0,0,.25); 
     padding: .5em 1em;
 }
 
