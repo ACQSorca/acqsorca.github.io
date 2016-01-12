@@ -247,26 +247,19 @@ footer {
     }
 }
 
-h1 {
-    margin-top: .5em;
-}
-
 h1, h2 {
     margin: 0;
-    margin-left: 200px;
 }
 
-body {
-    clear: both;
+.project {
+    overflow: hidden;
+    padding: 1em;
 }
 
-main {
-    clear: both;
-    overflow: auto;
+.project img {
+    width: 300px;
 }
 
-#sidebar {
-}
 footer {
     clear: both;
 }
