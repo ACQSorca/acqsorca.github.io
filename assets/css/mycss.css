@@ -4,7 +4,7 @@
 /* Color Scheme
 Brown - #965824
 Blue - #005287 
-Silver - black (10% opacity) or white (90% opacity) */
+Silver - #aaa, black (10% opacity) or white (90% opacity) */
 
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,300italic,600,600italic);
@@ -28,7 +28,13 @@ body {
 }
 
 #header {
-    background-image: url(../media/placeholder.jpg);
+    background: url(../media/banner.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#header h1 {
+    color: white;
+    text-shadow: 3px 3px black;
 }
 
 main {
@@ -48,7 +54,7 @@ img {
 }
 
 a:hover {
-    color: gray;
+    color: #aaa;
 }
 .no-margin {
     margin: 0;
@@ -90,60 +96,86 @@ a:hover {
 	color: gray;
 }
 
+/* Main Page */
+.index-intro {
+    width: 60%;
+    float: left;
+}
+
+
+
+
 
 /* Sidebar */
 #sidebar {
 	float: right;
-	background-color: rgba(0, 0, 0, .1);
-	padding: 1em;
+	background-color: lightgray;
+	padding: .5em 1em;
 	width: 30%;
 	height: 100%;
 }
 
 #sidebar h2 {
 	text-align: center;
-	margin-bottom: .5em;
+    font-size: 20pt;
+	margin-bottom: 0;
+}
+
+#sidebar h2 a {
+    color: #005287;
+    text-decoration: none;
+}
+
+#sidebar h2 a:hover{
+    color: gray;
 }
 
 #sidebar img {
 	margin: .25em;
 }
 
-
-
-
-
-
-
-
-
-
+#sidebar p {
+    margin: 0;
+}
 
 /* NavMenu */
 #navmenu {
 	float: left;
 	background-color: rgba(0, 0, 0, .1);
-	padding: 1em;
+	padding: 0;
 	width: auto;
     min-width: 190px;
     min-height: 500px;
     height: 100%;
+    overflow: visible;
 }
 
-#navmenu ul a {
-    text-decoration: none;
+#navmenu h3 {
+    margin: 1em .5em .5em;
 }
 
 #navmenu ul {
     list-style-type: none;
     text-decoration: none;
     padding: 0;
+    margin: 0 0 0 2em;
 }
 
-#navmenu ul ul {
-    margin: 0 2em;
+#navmenu ul li {
+    width: 100%;
 }
 
+#navmenu ul li a {
+    display: inline-block;
+    padding: .5em;
+    width: 100%;
+    text-decoration: none;
+}
+
+#navmenu ul li a:hover, #navmenu ul li a.currentgallery{
+    background-color: white;
+    color: gray;
+}
 
 /* Gallery */
 .image-container {
@@ -182,6 +214,7 @@ a:hover {
 }
 
 .contact img {
+    padding-right: .5em;
 }
 
 .contact span {
@@ -210,6 +243,13 @@ footer {
     }
 }
 
-
+@media screen and (max-width: 960px) and (min-width:50px) {
+    .index-intro {
+        width: auto;
+    }
+    #sidebar {
+        width: auto;
+    }
+}
 
 
