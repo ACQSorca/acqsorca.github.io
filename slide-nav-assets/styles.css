@@ -51,7 +51,7 @@
         display: block;
         padding: 0;
         margin-top: 18pt;
-        z-index: 100px;
+        z-index: 100;
     }
 
     #nav-bar ul, #nav-bar ul li {

@@ -2,11 +2,13 @@
 @charset "UTF-8";
 
 /* Color Scheme
-Brown - #CAA987
+Light Brown - #CAA987
+Brown - #A5775C
+Dark Brown - #9A6B52
+
 Blue - #005287
-
-Silver - #aaa #D2D2D2
-
+Dark Silver - #aaa
+lightsliver
 Gold - F5AD3A
 */
 
@@ -38,12 +40,7 @@ main {}
 	
 article.content {
     height: 100%;
-    margin: 1em 2em;
     width: auto;
-}
-
-#home-wrapper, #gallery-wrapper #contact-wrapper {
-	margin: 0;
 }
 
 img {
@@ -65,7 +62,8 @@ a:hover {
 /* Skipnav */
 #skipnav {
 	color: transparent;
-    float: left;
+    position: absolute;
+	z-index: 100;
 }
 
 #skipnav:hover, #skipnav:focus {
@@ -96,7 +94,9 @@ a:hover {
 }
 
 #nav-bar ul li a:hover, #nav-bar ul li #currentpage{
-	color: gray;
+	color: white;
+	box-sizing: border-box;
+	border-bottom: 3px solid #A5775C;
 }
 
 /* Main Page */
@@ -126,7 +126,15 @@ a:hover {
 
 footer {
     clear: both;
+    overflow: hidden;
+	clear: both;
+	text-align: center;
+	padding: 1em;
+	/*border-top: 1.5px solid black;*/
+	background-color: black;
+	color:#D1D2D4;
 }
+
 
 #home-page-titles img {
 	height: 200px;
@@ -201,6 +209,7 @@ footer {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
+	color: white;
 }
 
 #profile-picture-wrapper {
@@ -211,16 +220,25 @@ footer {
 	
 }
 
+/* Gallery Page */
+
+#gallery-wrapper {
+	min-height: 100vh;
+	display: flex;
+	align-items: stretch;
+}
+
 /* nav-menu */
 #nav-menu {
-	float: left;
-	background-color: lightgray;
+	background-color: #005287;
 	padding: 0;
-	width: auto;
-    min-width: 190px;
-    min-height: 500px;
-    height: 2000px; /* There has to be a better way */
-    overflow: visible;
+    flex-basis: 230px;
+	color: white;
+}
+
+#gallery-list, #project {
+	flex-basis: 0;
+	flex: 1;
 }
 
 #nav-menu h3 {
@@ -239,59 +257,81 @@ footer {
 }
 
 #nav-menu ul li a {
-    display: inline-block;
+    display: block;
     padding: .5em;
     width: 100%;
     text-decoration: none;
+	color: lightgray;
 }
 
 #nav-menu ul li a:hover, #nav-menu ul li a#current-gallery{
-    background-color: white;
-    color: black;
+    color: white;
+	font-weight: 900;
 }
 
 #nav-menu ul li a:hover {
-    color: gray;
 }
 
-/* Gallery */
-.image-container {
+
+#gallery-list {
+	background-color: lightgray;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	justify-content: space-around;
+}
+
+.work-thumbnail {
+	background-color: white;
     position: relative;
     overflow: hidden;
-    height: 150px;
-    width: 200px;
-    margin-left: 2em;
-    margin-top: 2em;
-    border: 1px solid black;
-    display: inline-block;
+    height: 184px;
+	max-width: 400px;
+	margin: 6pt;
+	border-radius: 3px;
+	box-shadow: 3px 3px 2px gray;
 }
 
-.image-container a img {
+.work-thumbnail a img {
     overflow: hidden;
-    height: 225px;
-    float: none;
-    align: center;
+    height: 100%;
 }
 
-.image-container a .gallerytitle {
+.work-thumbnail a .gallerytitle {
     position: absolute;
-    right: 0;
-    bottom: 0;
+	bottom: 0;
+	width: 100%;
     background-color: rgba(0, 0, 0, .6); 
     padding: .5em 1em;
+	display: none;
 }
 
 
-.image-container a {
+.work-thumbnail a {
     color: white;
 }
 
-.image-container a:hover {
+.work-thumbnail a:hover {
     color: gray;
 }
 
 /* Resume */
-#resume-wrapper {}
+#resume-wrapper {
+	margin: 0 10%;
+}
+
+#resume-pdf-link {
+	text-decoration: none;
+	background-color: #A5775C;
+	color: white;
+	border: 3px solid 'dark blue';
+	border-radius: 5px;
+	padding: 4pt 6pt;
+}
+
+#resume-pdf-link:hover {
+	background-color: #CAA987;
+}
 	
 #resume-wrapper h2 {
 	font-family: Montserrat;
@@ -406,18 +446,6 @@ footer {
 
 .contact span {
 }
-
-/* Footer */
-footer {
-    overflow: hidden;
-	clear: both;
-	text-align: center;
-	padding: 1em;
-	/*border-top: 1.5px solid black;*/
-	background-color: black;
-	color:#D1D2D4;
-}
-
 
 
 @media print {
