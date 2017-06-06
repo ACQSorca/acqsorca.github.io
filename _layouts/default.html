@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    {% include head.html %}
+    
+	<body>
+		<a href="{{ page.url }}#main" id="skipnav">Skip to main content</a>
+        
+        {% include nav-bar.html %}
+		
+		<main id="main">
+            {{ content }}
+		</main>
+        
+        {% include footer.html %}
+        
+	</body>
+    
+    <script type="text/javascript" src="/slide-nav-assets/script.js"></script>
+    
+</html>
