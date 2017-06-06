@@ -1,0 +1,17 @@
+<!-- BEGIN #nav-menu -->
+<nav id="nav-menu">
+    
+    <h3>Featured</h3>
+    <ul>
+        <li><a href="gallery.html" {% if page.category == 'Main Gallery' %}id="current-gallery"{% endif %}>Main</a></li>
+    </ul>
+    
+    <h3>Projects by Category</h3>
+    <ul>
+        <li><a href="/graphics.html" {% if page.category == 'Graphics' %}id="current-gallery"{% endif %}>Graphics</a></li>
+        <li><a href="/development.html" {% if page.category == 'Development' %}id="current-gallery"{% endif %}>Development</a></li>
+        <li><a href="/other.html" {% if page.category == 'Other' %} id="current-gallery"{% endif %}>Other</a></li>
+    </ul>
+    
+</nav>
+<!--END #nav-menu -->

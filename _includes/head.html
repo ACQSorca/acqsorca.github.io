@@ -1,0 +1,19 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<base href="{{ site.url }}" />
+
+	<!-- Included with default theme -->
+	<title>Addison's Porfolio: {% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+	
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+
+    <link type="text/css" rel="stylesheet" href="assets/css/styles.css"/>
+	<link type="text/css" rel="stylesheet" href="slide-nav-assets/styles.css"/>
+    
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" />
+
+
+	<link rel="shorcut icon" type ="image/png" href="/favicon.png">
+
+</head>

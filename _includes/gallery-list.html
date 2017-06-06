@@ -1,0 +1,9 @@
+{% assign works = site.works | where:'category', include.category %}
+{% for work in works %}
+    <div class="image-container">
+        <a href="{{ work.url }}">
+            <img src="{{ work.img_url }}"/>
+            <div class="gallerytitle">{{ work.title }}</div>
+        </a>
+    </div>
+{% endfor %}

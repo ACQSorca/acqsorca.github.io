@@ -1,0 +1,34 @@
+<div id="mobile-header">
+    <div id="nav-button-container">
+        <div id="nav-button"></div>
+    </div>
+</div> <!-- END #mobile-header -->
+
+<nav id="nav-bar" style="transform: translate(0px);">
+    <ul>
+        <li>
+            <a href="/index.html" 
+            {% if page.url == '/' %} id="currentpage"{% endif %}>Home</a>
+        </li>
+        
+        <li>
+            <a href="about.html" 
+            {% if page.url == '/about.html' %} id="currentpage"{% endif %}>About</a>
+        </li>
+        
+        <li>
+            <a href="gallery.html" 
+            {% if page.url == '/gallery.html' %} id="currentpage"{% endif %}>Gallery</a>
+        </li>
+        
+        <li>
+            <a href="resume.html" 
+            {% if page.url == '/resume.html' %} id="currentpage"{% endif %}>R&eacute;sum&eacute;</a>
+        </li>
+        
+        <li>
+            <a href="contact.html" 
+            {% if page.url == '/contact.html' %} id="currentpage"{% endif %}>Contact</a>
+        </li>
+    </ul>
+</nav>
