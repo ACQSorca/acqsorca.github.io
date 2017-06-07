@@ -210,6 +210,11 @@ footer {
 	background-repeat: no-repeat;
 	background-position: top;
 	color: white;
+	min-height: 100vh;
+	padding: 24pt 0;
+}
+
+#about-wrapper h1 {
 }
 
 #profile-picture-wrapper {
@@ -217,7 +222,21 @@ footer {
 }
 
 #profile-picture {
-	
+	margin: 24pt;
+}
+
+#about-description-wrapper {
+	box-sizing: border-box;
+	line-height: 24pt;
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	padding: 12pt 72pt;
+}
+
+@media (max-width: 700px) {
+	#about-wrapper p {
+		margin: 12pt;
+	}
 }
 
 /* Gallery Page */
@@ -228,10 +247,16 @@ footer {
 	align-items: stretch;
 }
 
+@media (max-width: 500px) {
+	#gallery-wrapper {
+		display: block;
+	}
+}
+
 /* nav-menu */
 #nav-menu {
 	background-color: #005287;
-	padding: 0;
+	padding: 12pt 0;
     flex-basis: 230px;
 	color: white;
 }
@@ -242,7 +267,8 @@ footer {
 }
 
 #nav-menu h3 {
-    margin: 1em .5em .5em;
+    padding: 12pt 6pt;
+	margin: 0;
 }
 
 #nav-menu ul {
@@ -274,38 +300,48 @@ footer {
 
 
 #gallery-list {
+	padding: 24pt;
 	background-color: lightgray;
 	display: flex;
 	flex-wrap: wrap;
 	align-content: flex-start;
-	justify-content: space-around;
+	justify-content: center;
+}
+
+#gallery-list a {
+	display: block;
+	margin: 6pt;
 }
 
 .work-thumbnail {
 	background-color: white;
     position: relative;
     overflow: hidden;
-    height: 184px;
+	max-height: 200px;
 	max-width: 400px;
-	margin: 6pt;
 	border-radius: 3px;
 	box-shadow: 3px 3px 2px gray;
+	text-align: center;
 }
 
-.work-thumbnail a img {
+.work-thumbnail img {
     overflow: hidden;
-    height: 100%;
+    width: 100%;
 }
 
-.work-thumbnail a .gallerytitle {
+.work-thumbnail .gallerytitle {
     position: absolute;
 	bottom: 0;
 	width: 100%;
-    background-color: rgba(0, 0, 0, .6); 
-    padding: .5em 1em;
-	display: none;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 12pt;
+	text-align: center;
+	visibility: hidden;
 }
 
+.work-thumbnail:hover .gallerytitle {
+	visibility: visible;
+}
 
 .work-thumbnail a {
     color: white;
@@ -313,6 +349,27 @@ footer {
 
 .work-thumbnail a:hover {
     color: gray;
+}
+
+#project {
+	overflow: hidden;
+}
+
+
+#project img {
+	width: 75%;
+}
+
+#project-header {
+	padding: 24pt;
+	background-color: lightgray;
+	text-align: center;
+}
+
+#project-description {
+	margin: 0.5in 1in;
+	line-height: 2em;
+	font-size: 14pt;
 }
 
 /* Resume */
@@ -393,11 +450,16 @@ footer {
 /* Contacts */
 #contact-wrapper {
 	display: flex;
+	height: calc(100vh - 46px - 57px);
+}
+
+#contact-wrapper h1 {
+	margin: 12pt;
 }
 
 #contact-form-wrapper {
 	flex-grow: 5;
-	width: 100%;
+	margin: 0 1in;
 }
 
 #contact-form {
@@ -424,16 +486,19 @@ footer {
 
 #contact-form input[type=submit] {
 	border-radius: 5px;
+	width: 25%;
 }
 
 #contact-form textarea {
 	font-family: 'Open Sans', sans-serif;
+	height: 300px;
 }
 
 #contact-sidebar {
 	flex-basis: 300px;
 	padding: 12pt;
-	background-color: #d2d2d2;
+	background-color: #005287;
+	color: lightgray;
 	box-sizing: border-box;
 }
 
@@ -447,6 +512,15 @@ footer {
 .contact span {
 }
 
+@media (max-width: 800px) {
+	#contact-wrapper {
+		display: block;
+	}
+	
+	#contact-form-wrapper {
+		margin: 12pt;
+	}
+}
 
 @media print {
     html {
