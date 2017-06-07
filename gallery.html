@@ -3,13 +3,12 @@ layout: gallery-page
 title: Gallery
 category: Main Gallery
 ---
+
 <div id="gallery-list">
 {% for work in site.works %}
-    <div class="work-thumbnail">
-        <a href="{{ work.url }}">
-            <img src="{{ work.img_url }}"/>
-            <div class="gallerytitle">{{ work.title }}</div>
-        </a>
-    </div>
+    <a class="work-thumbnail" href="{{ work.url }}">
+        <img src="{{ work.img_url }}"/>
+        <div class="gallerytitle">{{ work.title }}</div>
+    </a>
 {% endfor %}
-</div>
+</div.
