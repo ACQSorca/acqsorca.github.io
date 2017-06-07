@@ -1,11 +1,11 @@
 <div id="gallery-list">
 {% assign works = site.works | where:'category', include.category %}
 {% for work in works %}
-    <div class="work-thumbnail">
-        <a href="{{ work.url }}">
+    
+        <a class="work-thumbnail" href="{{ work.url }}">
             <img src="{{ work.img_url }}"/>
             <div class="gallerytitle">{{ work.title }}</div>
         </a>
-    </div>
+    
 {% endfor %}
 </div>
